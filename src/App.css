@@ -1,0 +1,12 @@
+body {
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.other {
+  flex: 4;
+}
