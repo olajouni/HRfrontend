@@ -9,34 +9,35 @@ import Vacancies from "./Pages/Vacancies/Vacancies";
 import Starred from "./Pages/Starred/Starred";
 import SignUp from "./Components/SignUp/SignUp";
 import Form from "./Components/SignUp/Form";
-// import Interview from "./Pages/Interview/Interview";
-// import { PCal } from "./Pages/PCal/PCal";
+
+import { PCal } from "./Pages/PCal/PCal";
 
 function App() {
   return (
     <div>
-      {/* <Form /> */}
-      {/* <Topbar /> */}
+      <Topbar />
 
-      {/* <div className="container">
+      <div className="container">
         <Sidebar />
 
-        <div className="other"> */}
-      <Routes>
-        <Route exact path="/" element={<Form />}></Route>
-        {/* {<Route exact path="/" element={<Home />}></Route>} */}
+        <div className="other">
+          <Routes>
+            {/* <Route exact path="/" element={<Form />}></Route> */}
+            {<Route exact path="/" element={<Home />}></Route>}
 
-        {/* <Route exact path="/applicants" element={<Candidate />}></Route>
+            <Route exact path="/applicants" element={<Candidate />}></Route>
             <Route exact path="/vacancies" element={<Vacancies />}></Route>
 
             <Route
               exact
               path="/starred-applications"
               element={<Starred />}
-            ></Route> */}
-      </Routes>
-      {/* </div>
-      </div> */}
+            ></Route>
+
+            {/* <Route exact path="/calendar" element={<PCal />}></Route> */}
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }

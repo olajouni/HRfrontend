@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Pcal = () => {
-  return <div> Pcal</div>;
-};
+export default function PCal() {
+  return <div>PCal</div>;
+}
