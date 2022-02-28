@@ -39,8 +39,8 @@
 }
 
 .navSearch > input {
-  border: none;
-  outline-width: none;
+  border: none !important;
+  outline: 0px solid transparent;
   height: 100%;
   width: 100%;
   padding: 5px 5px 5px 5px;
@@ -60,6 +60,7 @@
   cursor: pointer;
   position: absolute;
   right: 30px;
+  border-radius: 50%;
 }
 
 .topbarIcons {

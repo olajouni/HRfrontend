@@ -6,13 +6,20 @@ import {
   WorkOutline,
   PeopleOutline,
   StarOutline,
-  CheckCircleOutline,
+  // CheckCircleOutline,
   CalendarToday,
+  Menu,
 } from "@material-ui/icons";
 
 export default function Sidebar() {
   return (
     <nav className="sidebar">
+      <div className="sidebarUpper">
+        <div className="toggle-menu-btn">
+          <Menu />
+        </div>
+      </div>
+
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <ul className="sidebarList">
@@ -44,16 +51,18 @@ export default function Sidebar() {
               </Link>
             </li>
 
-            <li className="sidebarListItem">
+            {/* <li className="sidebarListItem">
               <CheckCircleOutline className="sidebarIcon" />
               <Link className="link" to="/interview">
                 Interview Status
               </Link>
-            </li>
+            </li> */}
 
             <li className="sidebarListItem">
               <CalendarToday className="sidebarIcon" />
-              Calendar
+              <Link className="link" to="/calendar">
+                Calendar
+              </Link>
             </li>
           </ul>
         </div>

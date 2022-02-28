@@ -1,10 +1,11 @@
 .sidebar {
   flex: 1;
   height: calc(100vh - 50px);
+  box-sizing: border-box;
   background-color: #343a40;
   position: sticky;
-
-  width: 250px;
+  /* padding: 30px 20px; */
+  width: 150px;
 }
 
 .sidebarWrapper {
@@ -47,4 +48,17 @@ link:focus,
 link:active {
   text-decoration: none;
   color: inherit;
+}
+
+.sidebarUpper {
+  position: relative;
+}
+
+.toggle-menu-btn {
+  display: inline-block;
+  color: black;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
 }
