@@ -9,17 +9,15 @@ import Vacancies from "./Pages/Vacancies/Vacancies";
 import Starred from "./Pages/Starred/Starred";
 import SignUp from "./Components/SignUp/SignUp";
 import Form from "./Components/SignUp/Form";
-
-import { PCal } from "./Pages/PCal/PCal";
+import PCal from "./Pages/PCal/PCal";
 
 function App() {
   return (
-    <div>
+    <div className="h">
       <Topbar />
 
       <div className="container">
         <Sidebar />
-
         <div className="other">
           <Routes>
             {/* <Route exact path="/" element={<Form />}></Route> */}
@@ -34,7 +32,7 @@ function App() {
               element={<Starred />}
             ></Route>
 
-            {/* <Route exact path="/calendar" element={<PCal />}></Route> */}
+            <Route exact path="/calendar" element={<PCal />}></Route>
           </Routes>
         </div>
       </div>
