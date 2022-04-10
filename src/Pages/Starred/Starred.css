@@ -1,3 +1,11 @@
 .starredApp {
   flex: 4;
 }
+
+.list {
+  display: flex;
+}
+
+.listContainer {
+  flex: 6;
+}

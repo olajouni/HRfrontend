@@ -1,7 +1,6 @@
-.home {
+.list {
   display: flex;
 }
-
-.homecontainer {
+.listContainer {
   flex: 6;
 }

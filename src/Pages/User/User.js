@@ -1,16 +1,21 @@
 import React from "react";
+import "./User.css";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Topbar from "../../Components/Topbar/Topbar";
-import "./Starred.css";
+import { userColumns, userRows } from "../../dataapplicants";
 
-export default function Starred() {
+const User = () => {
   return (
     <div className="list">
       <Sidebar />
       <div className="listContainer">
         <Topbar />
-        Starred
+        <div className="user">
+          <div className="userTitleContainer"></div>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default User;

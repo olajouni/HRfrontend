@@ -6,9 +6,6 @@
   flex: 6;
 }
 
-.datatable {
-  height: 500px;
+.user {
   padding: 20px;
-  width: 96.5%;
-  background-color: white;
 }
