@@ -25,7 +25,7 @@ const PCal = () => {
       <Sidebar />
       <div className="listContainer">
         <Topbar />
-        {/* <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" /> */}
+        <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" />
       </div>
     </div>
   );

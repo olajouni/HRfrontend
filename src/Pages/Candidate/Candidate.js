@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { DataGrid } from "@material-ui/data-grid";
 import { useTable } from "react-table";
 import { userColumns, userRows } from "../../dataapplicants";
@@ -6,8 +6,13 @@ import "./Candidate.css";
 import { Link } from "react-router-dom";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Topbar from "../../Components/Topbar/Topbar";
+import { StarBorder, Star } from "@material-ui/icons";
+import { Button } from "@material-ui/core";
 
 export const Candidate = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+
   const actionColumn = [
     {
       field: "status",
@@ -19,6 +24,18 @@ export const Candidate = () => {
             <Link to={"/user/" + params.row.id}>
               <button className="userListView">View</button>
             </Link>
+          </>
+        );
+      },
+    },
+    {
+      field: "star",
+      headerName: "Star Applicant",
+      width: 180,
+      renderCell: (params) => {
+        return (
+          <>
+            <Button></Button>
           </>
         );
       },
