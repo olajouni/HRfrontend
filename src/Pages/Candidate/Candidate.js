@@ -27,7 +27,7 @@ export const Candidate = () => {
   const userColumns = [
     { field: "id", headerName: "ID", width: 100 },
     {
-      field: "userName",
+      field: "name",
       headerName: "User Name",
       width: 200,
     },

@@ -9,6 +9,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import AddEvent from "./AddEvent";
+import axios from "axios";
 
 const PCal = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,7 +17,7 @@ const PCal = () => {
   const calendarRef = useRef(null);
 
   const onEventAdded = (event) => {
-    let calendarApi = this.calendarRef.current.getApi();
+    let calendarApi = calendarRef.current.getApi();
     calendarApi.AddEvent(event);
   };
 
@@ -27,7 +28,7 @@ const PCal = () => {
         <Topbar />
         <div className="event">
           <Button
-            onClick={() => setModalOpen(true)}
+            onClick={() => setModalOpen}
             variant="contained"
             color="primary"
             className="userSchedule"
@@ -52,6 +53,7 @@ const PCal = () => {
             }}
             selectable={true}
             editable={true}
+            
           />
         </div>
       </div>
