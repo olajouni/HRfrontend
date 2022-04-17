@@ -81,3 +81,8 @@
 .userUpdateTitle {
   font-weight: 600;
 }
+
+.hrSection {
+  padding: 5px;
+  margin-top: 0;
+}

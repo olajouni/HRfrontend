@@ -49,15 +49,19 @@ const User = () => {
           <div className="userContainer">
             <div className="userDisplay">
               <div className="userShowTop">
-                <span className="userShowUserName">{user.name}</span>
-                <span className="userShowUserTitle">{user.vacancy}</span>
+                <span className="userShowUserName">name: {user.name}</span>
+                <span className="userShowUserTitle">
+                  position: {user.vacancy}
+                </span>
               </div>
               <div className="userShowBottom">
                 <span className="userShowTitle">Account Details</span>
                 <div className="userShowInfo">
-                  <span className="userShowInfoTitle">{user.phone}</span>
-                  <span className="userShowInfoTitle">{user.email}</span>
-                  <span className="userShowInfoTitle">{user.location}</span>
+                  <span className="userShowInfoTitle">phone: {user.phone}</span>
+                  <span className="userShowInfoTitle">email: {user.email}</span>
+                  <span className="userShowInfoTitle">
+                    location: {user.location}
+                  </span>
                 </div>
                 <div className="pdfContainer">
                   <span className="showPdf"></span>
@@ -65,13 +69,24 @@ const User = () => {
               </div>
             </div>
             <div className="userUpdate">
-              <div className="userEdit">
+              {/* <div className="userEdit">
                 <div className="userUpdateTitle">Comments</div>
                 <TextField fullWidth multiline rows={3} id="fullWidth" />
 
                 <div className="trial">
                   <Status />
-                </div>
+                </div> */}
+              {/* </div> */}
+            </div>
+          </div>
+          <hr />
+          <h1>HR Manager section</h1>
+        </div>
+        <div className="hrSection">
+          <div className="container">
+            <div className="interview1">
+              <div className="interview2">
+                <div className="interview3"></div>
               </div>
             </div>
           </div>
