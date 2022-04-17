@@ -37,9 +37,9 @@ const PCal = () => {
           </Button>
 
           <AddEvent
-            isOpen={modalOpen}
-            onClose={() => setModalOpen(false)}
-            onEventAdded={(event) => onEventAdded(event)}
+          // isOpen={modalOpen}
+          // onClose={() => setModalOpen(false)}
+          // onEventAdded={(event) => onEventAdded(event)}
           ></AddEvent>
         </div>
         <div className="calendar">
@@ -53,7 +53,6 @@ const PCal = () => {
             }}
             selectable={true}
             editable={true}
-            
           />
         </div>
       </div>
