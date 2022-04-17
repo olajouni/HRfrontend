@@ -12,3 +12,10 @@
   width: 96.5%;
   background-color: white;
 }
+
+.vacancyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}

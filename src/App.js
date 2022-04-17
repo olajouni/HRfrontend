@@ -22,10 +22,9 @@ function App() {
         <div className="other">
           <Routes>
             {/* <Route exact path="/" element={<Form />}></Route> */}
-            {<Route exact path="/" element={<Home />}></Route>}
-
+            {/* {<Route exact path="/" element={<Home />}></Route>} */}
             <Route exact path="/applicants" element={<Candidate />}></Route>
-            <Route exact path="/vacancies" element={<Vacancies />}></Route>
+            <Route exact path="/" element={<Vacancies />}></Route>
 
             <Route
               exact

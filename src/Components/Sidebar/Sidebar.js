@@ -20,15 +20,15 @@ export default function Sidebar() {
       <hr />
       <div className="center">
         <ul>
-          <li className="sidebarListItem">
+          {/* <li className="sidebarListItem">
             <LineStyle className="sidebarIcon" />
             <Link className="link" to="/">
               Home
             </Link>
-          </li>
+          </li> */}
           <li className="sidebarListItem">
             <WorkOutline className="sidebarIcon" />
-            <Link className="link" to="/vacancies">
+            <Link className="link" to="/">
               Vacancies
             </Link>
           </li>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./User.css";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Topbar from "../../Components/Topbar/Topbar";
@@ -6,11 +6,29 @@ import Topbar from "../../Components/Topbar/Topbar";
 import Status from "../../Components/Status";
 import { userColumns, userRows } from "../../dataapplicants";
 import { Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { TextField } from "@material-ui/core";
 import Autocomplete, { createFilterOptions } from "@material-ui/core";
 
+import axios from "axios";
+
 const User = () => {
+  const [user, setUser] = useState({
+    name: "",
+    vacancy: "",
+    email: "",
+    phone: "",
+    location: "",
+  });
+
+  const { id } = useParams();
+  useEffect(() => {
+    loadUser();
+  }, []);
+  const loadUser = async () => {
+    const res = await axios.get(`http://localhost:3000/users/${id}`);
+    setUser(res.data);
+  };
   return (
     <div className="list">
       <Sidebar />
@@ -24,23 +42,22 @@ const User = () => {
                 color="primary"
                 className="userSchedule"
               >
-                Scedule Meeting
+                Schedule Interview
               </Button>
             </Link>
           </div>
           <div className="userContainer">
             <div className="userDisplay">
               <div className="userShowTop">
-                <span className="userShowUserName">John Smith</span>
-                <span className="userShowUserTitle">Business Analyst</span>
+                <span className="userShowUserName">{user.name}</span>
+                <span className="userShowUserTitle">{user.vacancy}</span>
               </div>
               <div className="userShowBottom">
                 <span className="userShowTitle">Account Details</span>
                 <div className="userShowInfo">
-                  <span className="userShowInfoTitle">johnsmith</span>
-                  <span className="userShowInfoTitle">+961 03333333</span>
-                  <span className="userShowInfoTitle">john99@gmail.com</span>
-                  <span className="userShowInfoTitle">Lebanon Beirut</span>
+                  <span className="userShowInfoTitle">{user.phone}</span>
+                  <span className="userShowInfoTitle">{user.email}</span>
+                  <span className="userShowInfoTitle">{user.location}</span>
                 </div>
                 <div className="pdfContainer">
                   <span className="showPdf"></span>

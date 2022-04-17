@@ -4,3 +4,14 @@
 .listContainer {
   flex: 6;
 }
+
+.calendar {
+  padding: 20px;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
